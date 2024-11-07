@@ -115,6 +115,12 @@ sed -i 's/解除网易云音乐播放限制/网易云音乐解锁/g' package/new
 # Theme
 git clone --depth 1 https://$github/oppen321/theme-argon package/new/luci-theme-argon
 
+# Change hostname
+sed -i "s/hostname='.*'/hostname='ZeroWrt'/g" package/base-files/files/bin/config_generate
+
+# 自定义设置
+cp -f $GITHUB_WORKSPACE/Diy/banner package/base-files/files/etc/banner
+
 # Mosdns
 git clone https://$github/sbwml/luci-app-mosdns -b v5 package/new/mosdns
 

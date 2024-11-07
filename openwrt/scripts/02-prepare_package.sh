@@ -118,8 +118,8 @@ git clone --depth 1 https://$github/oppen321/theme-argon package/new/luci-theme-
 # Change hostname
 sed -i "s/hostname='.*'/hostname='ZeroWrt'/g" package/base-files/files/bin/config_generate
 
-# 自定义设置
-cp -f $GITHUB_WORKSPACE/Diy/banner package/base-files/files/etc/banner
+# Change banner
+cp -f $GITHUB_WORKSPACE/diy/banner package/base-files/files/etc/banner
 
 # Mosdns
 git clone https://$github/sbwml/luci-app-mosdns -b v5 package/new/mosdns
